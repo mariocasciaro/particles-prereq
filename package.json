@@ -1,0 +1,31 @@
+{
+  "author": {
+    "name": "Mario Casciaro"
+  },
+  "name": "particles-prereq",
+  "description": "Basic utilities for particles based applications",
+  "homepage": "https://github.com/mariocasciaro/particles-prereq",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mariocasciaro/particles-prereq.git"
+  },
+  "dependencies": {
+    "lodash": "~2.2.0",
+    "winston": "~0.7.2",
+    "nconf": "~0.6.7",
+    "when": "~2.5.0"
+  },
+  "devDependencies": {
+    "scatter": "~0.5.7",
+    "mocha": "~1.12.0",
+    "chai": "~1.7.2"
+  },
+  "peerDependencies": {
+    "scatter": "~0.5.7"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha test/*.js --reporter spec"
+  },
+  "license": "MIT"
+}

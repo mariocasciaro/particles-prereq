@@ -1,0 +1,8 @@
+{
+  "hello": "hello",
+  "helloWorld": "${hello} ${world:name}!",
+  "world": {
+    "name": "world"
+  },
+  "helloWorldExt": "${helloWorld}!!"
+}
