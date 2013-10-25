@@ -1,6 +1,6 @@
 {
   "hello": "hello",
-  "helloWorld": "${hello} ${world:name}!",
+  "helloWorld": "${hello} ${world.name}!",
   "world": {
     "name": "world"
   },
