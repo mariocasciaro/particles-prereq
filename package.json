@@ -23,9 +23,6 @@
     "chai": "~1.7.2",
     "rimraf": "~2.2.2"
   },
-  "peerDependencies": {
-    "scatter": "~0.5.7"
-  },
   "scripts": {
     "test": "node_modules/.bin/mocha test/*.js --reporter spec"
   },
