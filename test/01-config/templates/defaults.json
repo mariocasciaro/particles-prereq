@@ -6,5 +6,7 @@
   },
   "helloWorldExt": "${helloWorld}!!",
   "default_hello": "hey",
-  "option": "${tes|default_hello}"
+  "option": "${tes|default_hello}",
+  "option2": "={tes|default_hello}",
+  "option3": "={tes|ahah}"
 }

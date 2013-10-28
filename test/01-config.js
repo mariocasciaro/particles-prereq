@@ -58,7 +58,7 @@ describe('Config',function() {
         config.initialize({appRoot: __dirname, configDir: FIXTURES+'/templates'});
       });
 
-      it('should replace templates', function() {
+      it('should replace vars', function() {
         expect(config.get('hello')).to.be.equal("hello");
         expect(config.get('helloWorld')).to.be.equal("hello world!");
         expect(config.get('helloWorldExt')).to.be.equal("hello world!!!");
@@ -71,6 +71,14 @@ describe('Config',function() {
 
       it('should handle options in variables using "|" ', function() {
         expect(config.get('option')).to.be.equal('hey');
+      });
+
+      it('should handle options in replacer variables', function() {
+        expect(config.get('option2')).to.be.equal('hey');
+      });
+
+      it('should handle undefined variables in replacer variables', function() {
+        expect(config.get('option3')).to.be.equal('');
       });
     });
     
