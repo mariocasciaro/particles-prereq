@@ -53,20 +53,27 @@ describe('Config',function() {
       expect(config.get('appRoot')).to.be.equal(FIXTURES);
     });
 
-    it('should replace templates', function() {
-      config.initialize({appRoot: __dirname, configDir: FIXTURES+'/templates'});
+    describe('templates', function() {
+      beforeEach(function() {
+        config.initialize({appRoot: __dirname, configDir: FIXTURES+'/templates'});
+      });
 
-      expect(config.get('hello')).to.be.equal("hello");
-      expect(config.get('helloWorld')).to.be.equal("hello world!");
-      expect(config.get('helloWorldExt')).to.be.equal("hello world!!!");
+      it('should replace templates', function() {
+        expect(config.get('hello')).to.be.equal("hello");
+        expect(config.get('helloWorld')).to.be.equal("hello world!");
+        expect(config.get('helloWorldExt')).to.be.equal("hello world!!!");
+      });
+
+      it('should handle undefined values', function() {
+        expect(config.get('helloWrong')).to.not.exist;
+      });
+
+
+      it('should handle options in variables using "|" ', function() {
+        expect(config.get('option')).to.be.equal('hey');
+      });
     });
-
-    it('should handle undefined values', function() {
-      config.initialize({appRoot: __dirname, configDir: FIXTURES+'/templates'});
-
-      expect(config.get('helloWrong')).to.not.exist;
-    });
-
+    
     it('should load chained configs', function() {
       config.initialize({appRoot: __dirname, configDir: FIXTURES+'/chaining'});
 

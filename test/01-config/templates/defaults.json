@@ -4,5 +4,7 @@
   "world": {
     "name": "world"
   },
-  "helloWorldExt": "${helloWorld}!!"
+  "helloWorldExt": "${helloWorld}!!",
+  "default_hello": "hey",
+  "option": "${tes|default_hello}"
 }
