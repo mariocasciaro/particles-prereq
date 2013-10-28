@@ -8,5 +8,6 @@
   "default_hello": "hey",
   "option": "${tes|default_hello}",
   "option2": "={tes|default_hello}",
-  "option3": "={tes|ahah}"
+  "option3": "={tes|ahah}",
+  "helloThrow": "${missing}!!"
 }

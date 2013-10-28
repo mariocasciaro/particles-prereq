@@ -68,7 +68,6 @@ describe('Config',function() {
         expect(config.get('helloWrong')).to.not.exist;
       });
 
-
       it('should handle options in variables using "|" ', function() {
         expect(config.get('option')).to.be.equal('hey');
       });
@@ -80,6 +79,13 @@ describe('Config',function() {
       it('should handle undefined variables in replacer variables', function() {
         expect(config.get('option3')).to.be.equal('');
       });
+
+      it('should throw if variable not found ', function() {
+        expect(function() {
+          config.get('helloThrow');
+        }).to.throw(/it is undefined/);
+      });
+
     });
     
     it('should load chained configs', function() {
