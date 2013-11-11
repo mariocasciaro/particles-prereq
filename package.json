@@ -4,16 +4,16 @@
   },
   "name": "particles-prereq",
   "description": "Basic utilities for particles based applications",
-  "homepage": "https://github.com/mariocasciaro/particles-prereq",
+  "homepage": "https://github.com/particles/particles-prereq",
   "version": "0.2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mariocasciaro/particles-prereq.git"
+    "url": "git://github.com/particles/particles-prereq.git"
   },
   "dependencies": {
-    "lodash": "~2.2.0",
+    "lodash": "~2.3.0",
     "winston": "~0.7.2",
-    "when": "~2.5.0",
+    "when": "~2.6.0",
     "object-path": "~0.1.1",
     "extend": "1.2.1"
   },
