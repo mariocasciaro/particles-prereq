@@ -99,12 +99,12 @@ describe('Config',function() {
     });
 
     it('should persist config values (to empty file)', function(done) {
-      var overrideFile = FIXTURES+'/persist/overrides.json';
+      var overrideFile = FIXTURES+'/persist/overrides.gen.json';
       rimraf.sync(overrideFile);
 
       config.initialize({appRoot: __dirname, configDir: FIXTURES+'/persist'});
 
-      config.persist('anotherkey', 'anotherval', function(err) {
+      config.persistOverride('anotherkey', 'anotherval', function(err) {
         if(err) return done(err);
 
         expect(config.get('anotherkey')).to.be.equal('anotherval');
@@ -116,10 +116,10 @@ describe('Config',function() {
     });
 
     it('should persist config values (to existing file)', function(done) {
-      var overrideFile = FIXTURES+'/persist/overrides.json';
+      var overrideFile = FIXTURES+'/persist/overrides.gen.json';
       config.initialize({appRoot: __dirname, configDir: FIXTURES+'/persist'});
 
-      config.persist('anotherkey2', 'anotherval2', function(err) {
+      config.persistOverride('anotherkey2', 'anotherval2', function(err) {
         if(err) return done(err);
 
         expect(config.get('anotherkey')).to.be.equal('anotherval');
