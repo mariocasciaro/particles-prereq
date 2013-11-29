@@ -6,5 +6,6 @@ var self = module.exports = {
   
   initialize: function(options) {
     self.config.initialize(options);
+    self.logger.initialize();
   }
 };
