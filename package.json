@@ -22,7 +22,8 @@
     "scatter": "~0.5.7",
     "mocha": "~1.12.0",
     "chai": "~1.7.2",
-    "rimraf": "~2.2.2"
+    "rimraf": "~2.2.2",
+    "through": "~2.3.4"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha test/*.js --reporter spec"
