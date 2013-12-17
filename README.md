@@ -3,6 +3,8 @@
 # particles-prereq
 ============
 
+### Warning: This module is deprecated and will be removed in the future.
+
 A set of utilities to bootstrap a [Particles](https://github.com/particles/particles) application
 
 - Config
